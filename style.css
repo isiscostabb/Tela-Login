@@ -1,0 +1,555 @@
+/* G E R A L */
+
+:root { 
+    --cor0: #200327;
+    --cor1: #503BD9;
+    --cor2: #F25757;
+}
+
+@font-face {
+    font-family: 'font1';
+    src: url(Midia/Caramel.otf) format(opentype);
+}
+
+@font-face {
+    font-family: 'font2';
+    src: url(Midia/Moonchild.otf) format(opentype);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-image: url(Midia/img\ \(2\).jpg);
+    background-size: cover;
+    justify-self: center;
+    align-self: center;
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+main{
+    background-color: rgba(59, 59, 59, 0.199);
+    box-shadow: 2px 2px 20px rgb(31, 0, 31);
+
+    width:900px;
+    height: 515px;
+    position: relative;
+    display: flex;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+
+    backdrop-filter: blur(1000px);
+    -webki-backdrop-filter: blur(10px);
+
+    backdrop-filter: invert(10%);
+    -webki-backdrop-filter: invert(35%);
+}
+
+form{
+    width: 450px;
+    height:35%;
+    padding: 0px 0px;
+}
+
+/*inputs*/
+
+input{
+    background-color: rgba(59, 59, 59, 0.199);
+    box-shadow: 2px 2px 10px rgba(31, 0, 31, 0.63);
+    backdrop-filter: invert(10%);
+    -webki-backdrop-filter: invert(35%);
+    border-radius: 10px;
+    border: 0;
+    width: 80%;
+    height: 30px;
+    padding: 0px 10px;
+    left: 50%;
+    transform: translate(-50%);
+    position: relative;
+    margin-bottom: 20px;
+    outline: none;
+}
+
+label{
+    text-align: center;
+    transform: translate(0, -50%);
+    position: relative;
+    font-family: 'font2';
+    font-size: 1.6em;
+    color: var(--cor1);
+    margin-top: 10px;
+    display: block;
+}
+
+input::placeholder{
+    color: var(--cor2);
+    font-family: 'font2';
+    letter-spacing: 1px;
+    font-size: 20px;
+}
+
+input[type=text]{
+    color: var(--cor2);
+    font-family: 'font2';
+    font-size: 1.5em;
+    letter-spacing: 1px;
+}
+
+input[type=password]{
+    color: var(--cor2);
+    font-family: 'font2';
+    font-size: 1.5em;
+    letter-spacing: 1px;
+}
+
+input[type=email]{
+    color: var(--cor2);
+    font-family: 'font2';
+    font-size: 1.5em;
+    letter-spacing: 1px;
+}
+
+/* textos */
+
+h1{
+    font-family: 'font1';
+    position: relative;
+    text-align: center;
+    margin: 0;
+    font-size: 90px;
+    text-shadow: 2px 2px #3B0C59;
+    color: var(--cor1);
+}
+
+h2{
+    font-family: 'font1';
+    position: relative;
+    text-align: center;
+    margin: 0;
+    font-size: 70px;
+    text-shadow: 2px 2px #3B0C59;
+    color: var(--cor2);
+}
+
+p{
+    position: relative;
+    font-family: 'font2';
+    color: var(--cor4);
+    display: flex;
+    align-items: center;
+}
+
+
+
+/* SLIDER LEFT */
+
+section.slider_left{
+    border-radius: 15px 0px 0px 15px;
+    width: 450px;
+    height: 100%;
+    box-shadow: 3px 0px 5px #380b0b6b;
+    background-image: linear-gradient(to bottom, #3B0C59, var(--cor1));
+    justify-content: center;
+    align-items: center;
+    left: 0%;
+    position: relative;
+    z-index: 2;
+    transition: all .4s ease-in;
+}
+
+h2.slider_left{
+    margin: 120px 0px 30px 0px;
+}
+
+div.slider_left.button{
+    background-color: var(--cor2);
+    border-radius: 50px;
+    box-shadow: 2px 2px #3B0C59;
+    width: 200px;
+    height: 30px;
+    padding: 0px 10px;
+    position: relative;
+    cursor: pointer;
+    border: none;
+    margin-top: 15px;
+    margin: auto;
+    align-content: center;
+}
+
+p.slider_left.button{
+    font-size: 25px;
+    text-align: center;
+    justify-content: center;
+    color: var(--cor0);
+}
+
+/* SLIDER RIGHT */
+
+section.slider_right{
+    border-radius: 0px 15px 15px 0px;
+    width: 500px;
+    left: 50%;
+    z-index: 2;
+    transition: all .4s ease-in;
+}
+
+
+
+/* LOGIN */
+
+section.login{
+    border-radius: 0px 15px 15px 0px;
+    padding-top: 30px;
+    width: 450px;
+    height: 485px;
+    z-index: 0;
+    position: relative;
+}
+
+p.login.subtitle{
+    text-align: center;
+    justify-content: center;
+    font-size: 28px;
+    margin: 10px 0px 12px 0px;
+    letter-spacing: .6px;
+}
+
+/* acesso alt */
+
+div.login.acessoalt{
+    width: 100%;
+    height: 100px;
+    display: block;
+    align-content: center;
+}
+
+div.dot{
+    background-color: var(--cor1);
+    box-shadow: 2px 2px #3B0C59;
+    width: 250px;
+    height: 30px;
+    border-radius: 50px;
+    margin: 0px 10px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    display: block;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    align-content: center;
+
+}
+
+div.dot:hover{
+    background-color: var(--cor2);
+    transition: .5s;
+}
+
+.gmail{
+    background-image: url(Midia/gmail.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.facebook{
+    background-image: url(Midia/facebook.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+p.dot.txt{
+    font-size: 23px;
+    text-align: center;
+    justify-content: center;
+    color: var(--cor0);
+}
+
+/* acesso normal */
+
+p.login.txt{
+    text-align: center;
+    justify-content: center;
+    font-size: 23px;
+    margin: 18px 0px 7px 0px;
+    letter-spacing: .3px;
+}
+
+p.login.senha{
+    text-align: center;
+    justify-content: right;
+    font-size: 18px;
+    letter-spacing: .2px;
+    cursor: pointer;
+    margin-right: 40px;
+}
+
+button.login.enviar{
+    background-color: var(--cor1);
+    border-radius: 50px;
+    box-shadow: 2px 2px #3B0C59;
+    width: 200px;
+    height: 30px;
+    padding: 0px 10px;
+    position: relative;
+    cursor: pointer;
+    border: none;
+    left: 225px;
+    transform: translate(-50%);
+    margin-top: 15px;
+}
+
+button.login.enviar:hover{
+    background-color: var(--cor2);
+    transition: .2s;
+}
+
+p.login.button{
+    font-size: 25px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: var(--cor0);
+}
+
+
+
+/* CADASTRO */
+
+section.cadastro{
+    border-radius: 15px 0px 0px 15px;
+    height: 100%;
+    width: 450px;
+    position: absolute;
+    z-index: 0;
+    overflow-x: hidden;
+}
+
+div.cadastro.top{
+    width: 1350px;
+    height: 170px;
+    padding: 15px 0px 0px 0px;
+}
+
+/* titulo */
+
+div.cadastro.top.text{
+    width: 1350px;
+    height: 40px;
+    display: flex;
+}
+
+h1.cadastro.top.title{
+    font-size: 50px;
+    text-align: center;
+    position: relative;
+    width: 450px;
+}
+
+/* etapas */
+
+div.cadastro.top.numeros{
+    margin-top: 15px;
+    width: 1350px;
+    height: 80px;
+    display: flex;
+    align-content: center;
+}
+
+div.etapas.numeros{
+    width: 450px;
+    height: 70px;
+    position: relative;
+    display: flex;
+}
+
+div.etapas.linha{
+    background-color: white;
+    border-radius: 50px;
+    width: 400px;
+    height: 20px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+div.etapas.linha1{
+    border-radius: 50px;
+    width: 130px;
+    height: 20px;
+    position: absolute;
+    left: 18%;
+    top: 50%;
+    transform: translate(0%, -50%);
+    transition: .2s;
+}
+
+div.etapas.linha2{
+    border-radius: 50px;
+    width: 40%;
+    height: 20px;
+    position: absolute;
+    left: 70%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: .2s;
+}
+
+div.etapas.numero{
+    background-color: #ffffff;
+    width: 70px;
+    height: 70px;
+    position: relative;
+    border-radius: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+}
+
+div.etapas.numero.um{
+    left: 60px;
+    background-color: var(--cor1);
+}
+
+div.etapas.numero.dois{
+    left: 160px;
+}
+
+div.etapas.numero.tres{
+    left:250px;
+}
+
+p.etapas.txt{
+    font-family: 'font1';
+    color: var(--cor2);
+    font-size: 32px;
+}
+
+div.etapas.numero.cor{
+    background-color: var(--cor1);
+    transition: .1s;
+    transition-delay: .1s;
+}
+
+div.pass_linha1{
+    position: absolute;
+    border-radius: 50px;
+    width: 39%;
+    height: 30%;
+    left: 15%;
+    top: 50%;
+    transform: translate(0%, -50%);
+    background-color: var(--cor1);
+    transition: .2s;
+}
+
+div.pass_linha2{
+    background-color: var(--cor1);
+    border-radius: 50px;
+    width: 40%;
+    height: 30%;
+    position: absolute;
+    left: 75%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: .2s;
+}
+
+/* formulario */
+
+div.cadastro.formulario{
+    width: 1350px;
+    height: 250px;
+    position: relative;
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    top: 0;
+    left: 0;
+}
+
+/* formulario p1*/
+
+form.criar_conta1{
+    height: 100%;
+    width: 450px;
+}
+
+p.cadastro.txt{
+    color: var(--cor1);
+    font-size: 25px;
+    text-align: center;
+    top: 0;
+    justify-content: center;
+}
+
+p.cadastro.txt.login.alt{
+    color: var(--cor1);
+    text-align: center;
+    top: 0;
+}
+
+p.cadastro.txt.email{
+    margin: 20px 0px 7px 0px;
+}
+
+/* formulario p2 */
+
+form.criar_conta2{
+    height: 100%;
+    width: 450px;
+}
+
+/* formulario p3 */
+
+form.criar_conta3{
+    height: 100%;
+    width: 450px;
+}
+
+
+/* botao prox */
+
+div.cadastro.bottom{
+    margin-top: 7px;
+    width: 1350px;
+    height: 50px;
+    display: flex;
+}
+
+div.cadastro.bottom.botao{
+    background-color: var(--cor1);
+    box-shadow: 2px 2px #3B0C59;
+    border-radius: 50px;
+    width: 200px;
+    height: 30px;
+    position: relative;
+    cursor: pointer;
+    border: none;
+    justify-content: center;
+    transform: translate(-50%);
+    left: 225px;
+}
+
+div.cadastro.bottom.botao.dois{
+    left: 475px;
+}
+
+div.cadastro.bottom.botao.tres{
+    left: 725px;
+}
+
+p.bottom.txt{
+    font-size: 23px;
+}
