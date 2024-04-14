@@ -85,14 +85,14 @@
                     </div>
 
                     <p class="cadastro txt email">comece digitando seu email</p>
-                    <input type="email" name="" id="">
+                    <input type="email" name="email" id="email" autocomplete="off">
 
                 </form>
 
                 <!--p2-->
                 <form class="criar_conta2" action="#">
                     <label for="nome_user">Escolha um nome como usuário</label>
-                    <input type="text" name="nome_user" id="nome_user">
+                    <input type="text" name="nome_user" id="nome_user" autocomplete="off">
 
                     <label for="criar_senha">Digite uma senha</label>
                     <input type="password" name="criar_senha" id="criar_senha">
@@ -103,11 +103,14 @@
             
                 <!--p3-->
                 <form class="criar_conta3" action="#">
+                    <label for="bairro">Digite o nome do seu bairro</label>
+                    <input type="text" name="bairro" id="bairro" autocomplete="off">
 
-                   
+                    <label for="rua">Digite o nome da sua rua</label>
+                    <input type="text" name="rua" id="rua" autocomplete="off">
 
-
-
+                    <label for="numero">Digite o numero da sua residência</label>
+                    <input type="number" name="numero" id="numero" autocomplete="off"> 
                 </form>
 
             </div>
@@ -128,11 +131,6 @@
             </div>
 
         </section>
-
-
-
-
-
 
 
         <section class="login">
@@ -168,10 +166,9 @@
         </section>
 
     </main>
-    
+
+    <script src="slider.js"></script>
+    <script src="etapas_validacoes.js"></script>
+
 </body>
-
-<script src="slider.js"></script>
-<script src="etapas.js"></script>
-
 </html>

@@ -79,6 +79,10 @@ input{
     outline: none;
 }
 
+input.errado{
+    outline: #db1e1e solid 1px;
+}
+
 label{
     text-align: center;
     transform: translate(0, -50%);
@@ -112,6 +116,17 @@ input[type=password]{
 }
 
 input[type=email]{
+    color: var(--cor2);
+    font-family: 'font2';
+    font-size: 1.5em;
+    letter-spacing: 1px;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type=number]{
     color: var(--cor2);
     font-family: 'font2';
     font-size: 1.5em;

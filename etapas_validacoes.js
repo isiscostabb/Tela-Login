@@ -1,16 +1,82 @@
 
+
+//validacao p1
+
+const botao = document.querySelector('.cadastro.bottom.botao')
+let resposta_email;
+
+function validacao_email() {
+    const email = document.querySelector('#email').value;
+    const email_input = document.querySelector('#email');
+
+
+    const valida = /\S+@\S+\.\S+/;
+    const resultado = valida.test(email);
+
+    if (resultado != true) {
+        email_input.classList.add('errado')
+        resposta_email = false;
+    } else {
+        email_input.classList.remove('errado')
+        resposta_email =  true;
+    }
+}
+
+botao.addEventListener("click", function (event) {
+    event.preventDefault();
+    validacao_email();
+});
+
+
+//validacao p2
+
+const botao2 = document.querySelector('.cadastro.bottom.botao.dois')
+let resposta_senhas;
+
+function validacao_senhas() {
+    const senha1 = document.querySelector('#criar_senha').value;
+    const senha2 = document.querySelector('#criar_senha2').value;
+
+    const senha1_input = document.querySelector('#criar_senha');
+    const senha2_input = document.querySelector('#criar_senha2');
+
+    //senha igual
+    if (senha2 != senha1) {
+        senha1_input.classList.add('errado')
+        senha2_input.classList.add('errado')
+        resposta_senhas = false;
+    } else {
+        senha1_input.classList.remove('errado')
+        senha2_input.classList.remove('errado')
+        resposta_senhas = true;
+    }
+}
+
+botao2.addEventListener("click", function (event) {
+    event.preventDefault();
+    validacao_senhas();
+});
+
+
+//---------------------------------------------
+
+
 const b1 = window.document.querySelector('div.cadastro.bottom.botao')
 const b2 = window.document.querySelector('div.cadastro.bottom.botao.dois')
 const b3 = window.document.querySelector('div.cadastro.bottom.botao.tres')
 
 b1.addEventListener('click', () => {
-    pass2()
-    local_form.scrollLeft += 450
+    if (resposta_email != false) {
+        pass2()
+        local_form.scrollLeft += 450
+    }
 }) 
 
 b2.addEventListener('click', () => {
-    pass3()
-    local_form.scrollLeft += 450
+    if (resposta_senhas != false) {
+        pass3()
+        local_form.scrollLeft += 450
+    }
 }) 
 
 //---------------------------------------------
@@ -114,3 +180,4 @@ tres_b.addEventListener('click', () => {
 tres.addEventListener('click', () => {
     local_form.scrollLeft +=900
 }) 
+
